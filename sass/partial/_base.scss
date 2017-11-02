@@ -11,16 +11,15 @@ header {
 .main {
   @include background-image(linear-gradient(lighten($color1, 30%), lighten($color2, 30%)));
   @include border-radius($border-radius * 3.5); 
-  border:3px solid $color2;
-  padding:$border-radius;
-  margin-bottom:25px; 
-  
+  border: 3px solid $color2;
+  padding: $border-radius;
+  margin-bottom: 25px; 
   ul {
     padding-top:14px;
   }
   li {
-    color:$fontcolor1;
-    margin-bottom:12px;
+    color: $fontcolor1;
+    margin-bottom: 12px;
     list-style: none;
     border-bottom: 1px solid $light-black;
     &:last-child{
@@ -44,6 +43,7 @@ header {
 	@extend .box;
 	background: $yellow;
 }
+
 .flexbox{
-	@include flex;
+	@import flex;
 }
