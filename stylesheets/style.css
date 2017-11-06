@@ -1,45 +1,135 @@
 @charset "UTF-8";
-/* line 1, ../sass/partial/_base.scss */
+/* line 1, ../sass/partial/base/_base.scss */
 body {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-/* line 6, ../sass/partial/_base.scss */
+/* line 6, ../sass/partial/base/_base.scss */
 body::-webkit-scrollbar {
   width: 2em;
   color: red;
 }
 
-/* line 10, ../sass/partial/_base.scss */
+/* line 10, ../sass/partial/base/_base.scss */
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-/* line 13, ../sass/partial/_base.scss */
+/* line 13, ../sass/partial/base/_base.scss */
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
 
-/* line 18, ../sass/partial/_base.scss */
+/* line 18, ../sass/partial/base/_base.scss */
 header h1 {
   font-size: 26px;
   margin-bottom: 26px;
 }
 
-/* line 22, ../sass/partial/_base.scss */
+/* line 22, ../sass/partial/base/_base.scss */
+#container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* line 27, ../sass/partial/base/_base.scss */
+.yoo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato, sans-serif;
+  font-size: 1.8rem;
+  background: radial-gradient(ellipse at center, #f5f5f5 0%, #dddddd 100%);
+  user-select: none;
+}
+
+/* line 37, ../sass/partial/base/_base.scss */
+.thumbnail {
+  -webkit-backface-visibility: hidden;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* line 46, ../sass/partial/base/_base.scss */
+.thumbnail img {
+  max-width: 100%;
+  transition: opacity .2s ease-in-out;
+}
+
+/* line 50, ../sass/partial/base/_base.scss */
+.thumbnail:hover img {
+  opacity: .5;
+}
+
+/* line 53, ../sass/partial/base/_base.scss */
+.thumbnail::after,
+.thumbnail::before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  transition: transform .4s ease-out;
+  color: #fff;
+}
+
+/* line 62, ../sass/partial/base/_base.scss */
+.thumbnail::after {
+  content: attr(data-title);
+  top: 0;
+  left: 0;
+  padding-top: 30px;
+  transform: translateY(-100%) scale(0.8);
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-family: Merriweather, serif;
+  text-align: center;
+}
+
+/* line 74, ../sass/partial/base/_base.scss */
+.thumbnail::before {
+  content: attr(data-description) "…";
+  top: 60%;
+  transform: translateY(100%) scale(0.8);
+  background: rgba(107, 38, 68, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #f1f1f1;
+  font-size: 1.5rem;
+}
+
+/* line 84, ../sass/partial/base/_base.scss */
+.thumbnail:hover::after,
+.thumbnail:hover::before {
+  transform: translateY(0%) scale(1);
+}
+
+/* line 87, ../sass/partial/base/_base.scss */
+h1 {
+  font-family: Merriweather, serif;
+  margin: 0 0 50px;
+  cursor: default;
+}
+
+/* line 1, ../sass/partial/layout/_nav.scss */
 nav {
   background-color: #5CDB94;
 }
-/* line 24, ../sass/partial/_base.scss */
+/* line 3, ../sass/partial/layout/_nav.scss */
 nav .nav__list {
   list-style: none;
   display: inline-flex;
   margin: 0px;
 }
-/* line 28, ../sass/partial/_base.scss */
+/* line 7, ../sass/partial/layout/_nav.scss */
 nav .nav__list li {
   padding: 15px 15px;
   margin: 0px 4px;
@@ -49,14 +139,14 @@ nav .nav__list li {
   -ms-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 33, ../sass/partial/_base.scss */
+/* line 12, ../sass/partial/layout/_nav.scss */
 nav .nav__list li:hover {
   background-color: #05396B;
   color: #FFFFFF;
   transform: skew(10deg);
 }
 
-/* line 41, ../sass/partial/_base.scss */
+/* line 20, ../sass/partial/layout/_nav.scss */
 .logo {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -72,33 +162,35 @@ nav .nav__list li:hover {
   -ms-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 49, ../sass/partial/_base.scss */
+/* line 28, ../sass/partial/layout/_nav.scss */
 .logo:hover {
   border-top: 0px;
   border-bottom: 2px solid #05396B;
 }
 
-/* line 55, ../sass/partial/_base.scss */
+/* line 1, ../sass/partial/module/_home.scss */
 .container {
   background-color: #7395AE;
-  height: 100vh;
+  padding-bottom: 150px;
 }
 
-/* line 59, ../sass/partial/_base.scss */
-.container > h1 {
-  padding: 20px;
-  color: #B0A295;
-}
-
-/* line 63, ../sass/partial/_base.scss */
+/* line 5, ../sass/partial/module/_home.scss */
 .main {
   width: 500px;
   height: 100px;
   background-color: #000000;
   border-radius: 50%;
   margin: 0px auto;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
-/* line 69, ../sass/partial/_base.scss */
+/* line 12, ../sass/partial/module/_home.scss */
+.main:hover {
+  padding-bottom: 30px;
+}
+/* line 15, ../sass/partial/module/_home.scss */
 .main .smile {
   width: 500px;
   height: 90px;
@@ -107,7 +199,7 @@ nav .nav__list li:hover {
   position: absolute;
   z-index: 5;
 }
-/* line 77, ../sass/partial/_base.scss */
+/* line 23, ../sass/partial/module/_home.scss */
 .main .teeth {
   width: 50px;
   height: 100px;
@@ -118,7 +210,7 @@ nav .nav__list li:hover {
   margin-left: 200px;
   border-radius: 5px;
 }
-/* line 87, ../sass/partial/_base.scss */
+/* line 33, ../sass/partial/module/_home.scss */
 .main .teeth-two {
   width: 50px;
   height: 100px;
@@ -130,7 +222,7 @@ nav .nav__list li:hover {
   border-radius: 5px;
 }
 
-/* line 99, ../sass/partial/_base.scss */
+/* line 44, ../sass/partial/module/_home.scss */
 .flexbox {
   display: -webkit-box;
   display: -webkit-flex;
@@ -140,7 +232,7 @@ nav .nav__list li:hover {
   padding-top: 100px;
 }
 
-/* line 103, ../sass/partial/_base.scss */
+/* line 48, ../sass/partial/module/_home.scss */
 .box {
   width: 200px;
   height: 300px;
@@ -166,11 +258,11 @@ nav .nav__list li:hover {
     transform: rotate(360deg);
   }
 }
-/* line 118, ../sass/partial/_base.scss */
+/* line 63, ../sass/partial/module/_home.scss */
 .wrapper {
   width: 200px;
   height: 300px;
-  background: #64495C;
+  background: #83687B;
   margin: 0 auto;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -182,7 +274,6 @@ nav .nav__list li:hover {
   border-radius: 5px;
   -webkit-animation: wrapper 2s linear infinite;
   animation: wrapper 2s infinite all;
-  background: #83687B;
 }
 
 @keyframes wrapper {
@@ -193,7 +284,7 @@ nav .nav__list li:hover {
     transform: rotate(-360deg);
   }
 }
-/* line 134, ../sass/partial/_base.scss */
+/* line 78, ../sass/partial/module/_home.scss */
 .inside-eye {
   margin: 0px auto;
   width: 180px;
@@ -205,9 +296,8 @@ nav .nav__list li:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* line 142, ../sass/partial/_base.scss */
-.eye-child {
+/* line 85, ../sass/partial/module/_home.scss */
+.inside-eye .eye-child {
   margin: 0px auto;
   width: 160px;
   height: 260px;
@@ -219,9 +309,8 @@ nav .nav__list li:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* line 151, ../sass/partial/_base.scss */
-.eye__sec {
+/* line 93, ../sass/partial/module/_home.scss */
+.inside-eye .eye-child .eye__sec {
   margin: 0px auto;
   width: 140px;
   height: 240px;
@@ -233,9 +322,8 @@ nav .nav__list li:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* line 160, ../sass/partial/_base.scss */
-.eye__third {
+/* line 101, ../sass/partial/module/_home.scss */
+.inside-eye .eye-child .eye__sec .eye__third {
   margin: 0px auto;
   width: 120px;
   height: 220px;
@@ -247,9 +335,8 @@ nav .nav__list li:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* line 169, ../sass/partial/_base.scss */
-.eye__forth {
+/* line 109, ../sass/partial/module/_home.scss */
+.inside-eye .eye-child .eye__sec .eye__third .eye__forth {
   margin: 0px auto;
   width: 100px;
   height: 200px;
@@ -261,9 +348,8 @@ nav .nav__list li:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* line 178, ../sass/partial/_base.scss */
-.eye__fifth {
+/* line 117, ../sass/partial/module/_home.scss */
+.inside-eye .eye-child .eye__sec .eye__third .eye__forth .eye__fifth {
   margin: 0px auto;
   width: 80px;
   height: 180px;
@@ -275,9 +361,8 @@ nav .nav__list li:hover {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-
-/* line 187, ../sass/partial/_base.scss */
-.eye__sixth {
+/* line 125, ../sass/partial/module/_home.scss */
+.inside-eye .eye-child .eye__sec .eye__third .eye__forth .eye__fifth .eye__sixth {
   margin: 0px auto;
   width: 60px;
   height: 160px;
@@ -288,93 +373,4 @@ nav .nav__list li:hover {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-}
-
-/* line 198, ../sass/partial/_base.scss */
-#container {
-  width: 300px;
-  margin: 0 auto;
-}
-
-/* line 207, ../sass/partial/_base.scss */
-.yoo {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Lato, sans-serif;
-  font-size: 1.8rem;
-  background: radial-gradient(ellipse at center, #f5f5f5 0%, #dddddd 100%);
-  user-select: none;
-}
-
-/* line 217, ../sass/partial/_base.scss */
-.thumbnail {
-  -webkit-backface-visibility: hidden;
-  display: inline-block;
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
-}
-
-/* line 226, ../sass/partial/_base.scss */
-.thumbnail img {
-  max-width: 100%;
-  transition: opacity .2s ease-in-out;
-}
-
-/* line 230, ../sass/partial/_base.scss */
-.thumbnail:hover img {
-  opacity: .5;
-}
-
-/* line 233, ../sass/partial/_base.scss */
-.thumbnail::after,
-.thumbnail::before {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 50%;
-  transition: transform .4s ease-out;
-  color: #fff;
-}
-
-/* line 242, ../sass/partial/_base.scss */
-.thumbnail::after {
-  content: attr(data-title);
-  top: 0;
-  padding-top: 55px;
-  transform: translateY(-100%) scale(0.8);
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 3.5rem;
-  font-weight: 300;
-  font-family: Merriweather, serif;
-  text-align: center;
-}
-
-/* line 253, ../sass/partial/_base.scss */
-.thumbnail::before {
-  content: attr(data-description) "…";
-  top: 50%;
-  transform: translateY(100%) scale(0.8);
-  background: rgba(107, 38, 68, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  color: #f1f1f1;
-  font-size: 1.5rem;
-}
-
-/* line 263, ../sass/partial/_base.scss */
-.thumbnail:hover::after,
-.thumbnail:hover::before {
-  transform: translateY(0%) scale(1);
-}
-
-/* line 266, ../sass/partial/_base.scss */
-h1 {
-  font-family: Merriweather, serif;
-  margin: 0 0 50px;
-  cursor: default;
 }

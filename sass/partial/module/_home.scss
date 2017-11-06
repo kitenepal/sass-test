@@ -1,0 +1,144 @@
+.container{
+  background-color: $section;
+  padding-bottom: 150px;
+}
+.main {
+  width: 500px;
+  height: 100px;
+  background-color: $black;
+  border-radius: 50%;
+  margin: 0px auto;
+  @include transition(0.5s);
+  &:hover{
+    padding-bottom: 30px;
+  }
+  .smile{
+    width: 500px;
+    height: 90px;
+    background-color: $section;
+    border-radius: 40%;
+    position: absolute;
+    z-index: 5;
+  }
+  .teeth{
+    width: 50px;
+    height: 100px;
+    background-color: $white;
+    position: absolute;
+    z-index: 4;
+    margin-top: 30px;
+    margin-left: 200px;
+    border-radius: 5px;
+  }
+  .teeth-two{
+    width: 50px;
+    height: 100px;
+    background-color: $white;
+    position: absolute;
+    z-index: 4;
+    margin-top: 30px;
+    margin-left: 255px;
+    border-radius: 5px;
+  }
+}
+.flexbox{
+  @include flex;
+  padding-top: 100px;
+}
+.box {
+  width: 200px;
+  height: 300px;
+  background: $box1;
+  margin: 0 auto;
+  @include transition(0.5s);
+  @include border-radius(5px);
+  -webkit-animation: box 2s linear infinite;
+  animation: box 2s infinite all;
+}
+@keyframes box{
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.wrapper{
+	width: 200px;
+  height: 300px;
+  background: $box2;
+  margin: 0 auto;
+  @include transition(0.5s);
+  @include border-radius(5px);
+  -webkit-animation: wrapper 2s linear infinite;
+  animation: wrapper 2s infinite all;
+}
+@keyframes wrapper{
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(-360deg);}
+}
+
+.inside-eye{
+  margin: 0px auto;
+  width: 180px;
+  height: 280px;
+  background-color: $white;
+  margin: 10px;
+  @include border-radius(5px);
+  .eye-child{
+    margin: 0px auto;
+    width: 160px;
+    height: 260px;
+    background-color: #C2C9CF;
+    position: absolute;
+    margin:10px;
+    @include border-radius(5px);
+    .eye__sec{
+      margin: 0px auto;
+      width: 140px;
+      height: 240px;
+      background-color: #C2B9B0;
+      position: absolute;
+      margin:10px;
+      @include border-radius(5px);
+      .eye__third{
+        margin: 0px auto;
+        width: 120px;
+        height: 220px;
+        background-color: #7E685A;
+        position: absolute;
+        margin:10px;
+        @include border-radius(5px);
+        .eye__forth{
+          margin: 0px auto;
+          width: 100px;
+          height: 200px;
+          background-color: #58493F;
+          position: absolute;
+          margin:10px;
+          @include border-radius(5px);
+          .eye__fifth{
+            margin: 0px auto;
+            width: 80px;
+            height: 180px;
+            background-color: #312822;
+            position: absolute;
+            margin:10px;
+            @include border-radius(5px);
+            .eye__sixth{
+              margin: 0px auto;
+              width: 60px;
+              height: 160px;
+              background-color: $black;
+              position: absolute;
+              margin:10px;
+              @include border-radius(5px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
