@@ -1,4 +1,6 @@
 @import "compass";
 @import "partial/variables";
 @import "partial/mixins";
-@import "partial/base";
+@import "partial/base/base";
+@import "partial/layout/nav";
+@import "partial/module/home";

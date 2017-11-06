@@ -1,0 +1,32 @@
+nav{
+  background-color: $nav-back;
+  .nav__list{
+    list-style: none;
+    display: inline-flex;
+    margin: 0px;
+    li{
+      padding:15px 15px;
+      margin: 0px 4px;
+      color: $nav-txt;
+      @include transition(0.3s);
+      &:hover{
+        background-color: $nav-txt;
+        color: $white;
+        transform: skew(10deg);
+      }
+    }
+  }
+}
+.logo{
+  @include border-radius(50%);
+  border-top:2px solid $nav-txt;
+  width: 65px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  @include transition(0.5s);
+  &:hover{
+    border-top: 0px;
+    border-bottom: 2px solid $nav-txt;
+  }
+}
