@@ -1,81 +1,380 @@
-/*
-Error: Invalid CSS after "	@import ": expected file to import (string or url()), was "flex;"
-        on line 48 of C:/Users/Nidan/developement/sass-test/sass/partial/_base.scss
-        from line 4 of C:/Users/Nidan/developement/sass-test/sass/style.scss
+@charset "UTF-8";
+/* line 1, ../sass/partial/_base.scss */
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-43: 	@extend .box;
-44: 	background: $yellow;
-45: }
-46: 
-47: .flexbox{
-48: 	@import flex;
-49: }
+/* line 6, ../sass/partial/_base.scss */
+body::-webkit-scrollbar {
+  width: 2em;
+  color: red;
+}
 
-Backtrace:
-C:/Users/Nidan/developement/sass-test/sass/partial/_base.scss:48
-C:/Users/Nidan/developement/sass-test/sass/style.scss:4
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1117:in `expr!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:371:in `block in import_directive'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:370:in `loop'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:370:in `import_directive'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:222:in `special_directive'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:197:in `directive'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:674:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:685:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:666:in `block'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:315:in `to_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"	@import \": expected file to import (string or url()), was \"flex;\"\A         on line 48 of C:/Users/Nidan/developement/sass-test/sass/partial/_base.scss\A         from line 4 of C:/Users/Nidan/developement/sass-test/sass/style.scss\A \A 43: 	@extend .box;\A 44: 	background: $yellow;\A 45: }\A 46: \A 47: .flexbox{\A 48: 	@import flex;\A 49: }"; }
+/* line 10, ../sass/partial/_base.scss */
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* line 13, ../sass/partial/_base.scss */
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/* line 18, ../sass/partial/_base.scss */
+header h1 {
+  font-size: 26px;
+  margin-bottom: 26px;
+}
+
+/* line 22, ../sass/partial/_base.scss */
+nav {
+  background-color: #5CDB94;
+}
+/* line 24, ../sass/partial/_base.scss */
+nav .nav__list {
+  list-style: none;
+  display: inline-flex;
+  margin: 0px;
+}
+/* line 28, ../sass/partial/_base.scss */
+nav .nav__list li {
+  padding: 15px 15px;
+  margin: 0px 4px;
+  color: #05396B;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 33, ../sass/partial/_base.scss */
+nav .nav__list li:hover {
+  background-color: #05396B;
+  color: #FFFFFF;
+  transform: skew(10deg);
+}
+
+/* line 41, ../sass/partial/_base.scss */
+.logo {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  border-top: 2px solid #05396B;
+  width: 65px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+/* line 49, ../sass/partial/_base.scss */
+.logo:hover {
+  border-top: 0px;
+  border-bottom: 2px solid #05396B;
+}
+
+/* line 55, ../sass/partial/_base.scss */
+.container {
+  background-color: #7395AE;
+  height: 100vh;
+}
+
+/* line 59, ../sass/partial/_base.scss */
+.container > h1 {
+  padding: 20px;
+  color: #B0A295;
+}
+
+/* line 63, ../sass/partial/_base.scss */
+.main {
+  width: 500px;
+  height: 100px;
+  background-color: #000000;
+  border-radius: 50%;
+  margin: 0px auto;
+}
+/* line 69, ../sass/partial/_base.scss */
+.main .smile {
+  width: 500px;
+  height: 90px;
+  background-color: #7395AE;
+  border-radius: 40%;
+  position: absolute;
+  z-index: 5;
+}
+/* line 77, ../sass/partial/_base.scss */
+.main .teeth {
+  width: 50px;
+  height: 100px;
+  background-color: #FFFFFF;
+  position: absolute;
+  z-index: 4;
+  margin-top: 30px;
+  margin-left: 200px;
+  border-radius: 5px;
+}
+/* line 87, ../sass/partial/_base.scss */
+.main .teeth-two {
+  width: 50px;
+  height: 100px;
+  background-color: #FFFFFF;
+  position: absolute;
+  z-index: 4;
+  margin-top: 30px;
+  margin-left: 255px;
+  border-radius: 5px;
+}
+
+/* line 99, ../sass/partial/_base.scss */
+.flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 100px;
+}
+
+/* line 103, ../sass/partial/_base.scss */
+.box {
+  width: 200px;
+  height: 300px;
+  background: #64495C;
+  margin: 0 auto;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-animation: box 2s linear infinite;
+  animation: box 2s infinite all;
+}
+
+@keyframes box {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 118, ../sass/partial/_base.scss */
+.wrapper {
+  width: 200px;
+  height: 300px;
+  background: #64495C;
+  margin: 0 auto;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-animation: wrapper 2s linear infinite;
+  animation: wrapper 2s infinite all;
+  background: #83687B;
+}
+
+@keyframes wrapper {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/* line 134, ../sass/partial/_base.scss */
+.inside-eye {
+  margin: 0px auto;
+  width: 180px;
+  height: 280px;
+  background-color: #FFFFFF;
+  margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 142, ../sass/partial/_base.scss */
+.eye-child {
+  margin: 0px auto;
+  width: 160px;
+  height: 260px;
+  background-color: #C2C9CF;
+  position: absolute;
+  margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 151, ../sass/partial/_base.scss */
+.eye__sec {
+  margin: 0px auto;
+  width: 140px;
+  height: 240px;
+  background-color: #C2B9B0;
+  position: absolute;
+  margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 160, ../sass/partial/_base.scss */
+.eye__third {
+  margin: 0px auto;
+  width: 120px;
+  height: 220px;
+  background-color: #7E685A;
+  position: absolute;
+  margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 169, ../sass/partial/_base.scss */
+.eye__forth {
+  margin: 0px auto;
+  width: 100px;
+  height: 200px;
+  background-color: #58493F;
+  position: absolute;
+  margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 178, ../sass/partial/_base.scss */
+.eye__fifth {
+  margin: 0px auto;
+  width: 80px;
+  height: 180px;
+  background-color: #312822;
+  position: absolute;
+  margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 187, ../sass/partial/_base.scss */
+.eye__sixth {
+  margin: 0px auto;
+  width: 60px;
+  height: 160px;
+  background-color: #000000;
+  position: absolute;
+  margin: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 198, ../sass/partial/_base.scss */
+#container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* line 207, ../sass/partial/_base.scss */
+.yoo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato, sans-serif;
+  font-size: 1.8rem;
+  background: radial-gradient(ellipse at center, #f5f5f5 0%, #dddddd 100%);
+  user-select: none;
+}
+
+/* line 217, ../sass/partial/_base.scss */
+.thumbnail {
+  -webkit-backface-visibility: hidden;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* line 226, ../sass/partial/_base.scss */
+.thumbnail img {
+  max-width: 100%;
+  transition: opacity .2s ease-in-out;
+}
+
+/* line 230, ../sass/partial/_base.scss */
+.thumbnail:hover img {
+  opacity: .5;
+}
+
+/* line 233, ../sass/partial/_base.scss */
+.thumbnail::after,
+.thumbnail::before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  transition: transform .4s ease-out;
+  color: #fff;
+}
+
+/* line 242, ../sass/partial/_base.scss */
+.thumbnail::after {
+  content: attr(data-title);
+  top: 0;
+  padding-top: 55px;
+  transform: translateY(-100%) scale(0.8);
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-family: Merriweather, serif;
+  text-align: center;
+}
+
+/* line 253, ../sass/partial/_base.scss */
+.thumbnail::before {
+  content: attr(data-description) "…";
+  top: 50%;
+  transform: translateY(100%) scale(0.8);
+  background: rgba(107, 38, 68, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #f1f1f1;
+  font-size: 1.5rem;
+}
+
+/* line 263, ../sass/partial/_base.scss */
+.thumbnail:hover::after,
+.thumbnail:hover::before {
+  transform: translateY(0%) scale(1);
+}
+
+/* line 266, ../sass/partial/_base.scss */
+h1 {
+  font-family: Merriweather, serif;
+  margin: 0 0 50px;
+  cursor: default;
+}

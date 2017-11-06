@@ -3,47 +3,268 @@ body{
 	padding: 0;
 	text-align: center;
 }
+body::-webkit-scrollbar {
+    width: 2em;
+    color: red;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
 header {
   h1 {
     font-size:26px; margin-bottom:26px;
   }
 }
-.main {
-  @include background-image(linear-gradient(lighten($color1, 30%), lighten($color2, 30%)));
-  @include border-radius($border-radius * 3.5); 
-  border: 3px solid $color2;
-  padding: $border-radius;
-  margin-bottom: 25px; 
-  ul {
-    padding-top:14px;
-  }
-  li {
-    color: $fontcolor1;
-    margin-bottom: 12px;
+nav{
+  background-color: $nav-back;
+  .nav__list{
     list-style: none;
-    border-bottom: 1px solid $light-black;
-    &:last-child{
-    	border-bottom: 0px;
+    display: inline-flex;
+    margin: 0px;
+    li{
+      padding:15px 15px;
+      margin: 0px 4px;
+      color: $nav-txt;
+      @include transition(0.3s);
+      &:hover{
+        background-color: $nav-txt;
+        color: $white;
+        transform: skew(10deg);
+      }
     }
+  }
 }
-
-.box {
-  width: 200px;
-  height: 300px;
-  background: $blue + $red;
-  margin: 0 auto;
-  transition: 0.5s;
-  @include border-radius(5px);
+.logo{
+  @include border-radius(50%);
+  border-top:2px solid $nav-txt;
+  width: 65px;
+  height: 50px;
+  position: relative;
+  top: 20px;
+  @include transition(0.5s);
   &:hover{
-  	transform: rotate(450deg);
-  	}
+    border-top: 0px;
+    border-bottom: 2px solid $nav-txt;
+  }
 }
 
-.wrapper{
-	@extend .box;
-	background: $yellow;
+.container{
+  background-color: $section;
+  height: 100vh;
+}
+.container > h1{
+  padding:20px;
+  color: $section-txt;
+}
+.main {
+  width: 500px;
+  height: 100px;
+  background-color: $black;
+  border-radius: 50%;
+  margin: 0px auto;
+  .smile{
+    width: 500px;
+    height: 90px;
+    background-color: $section;
+    border-radius: 40%;
+    position: absolute;
+    z-index: 5;
+  }
+  .teeth{
+    width: 50px;
+    height: 100px;
+    background-color: $white;
+    position: absolute;
+    z-index: 4;
+    margin-top: 30px;
+    margin-left: 200px;
+    border-radius: 5px;
+  }
+  .teeth-two{
+    width: 50px;
+    height: 100px;
+    background-color: $white;
+    position: absolute;
+    z-index: 4;
+    margin-top: 30px;
+    margin-left: 255px;
+    border-radius: 5px;
+  }
 }
 
 .flexbox{
-	@import flex;
+  @include flex;
+  padding-top: 100px;
+}
+.box {
+  width: 200px;
+  height: 300px;
+  background: $box1;
+  margin: 0 auto;
+  @include transition(0.5s);
+  @include border-radius(5px);
+  -webkit-animation: box 2s linear infinite;
+  animation: box 2s infinite all;
+}
+@keyframes box{
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.wrapper{
+	width: 200px;
+  height: 300px;
+  background: $box1;
+  margin: 0 auto;
+  @include transition(0.5s);
+  @include border-radius(5px);
+  -webkit-animation: wrapper 2s linear infinite;
+  animation: wrapper 2s infinite all;
+	background: $box2;
+}
+@keyframes wrapper{
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(-360deg);}
+}
+
+.inside-eye{
+  margin: 0px auto;
+  width: 180px;
+  height: 280px;
+  background-color: $white;
+  margin: 10px;
+  @include border-radius(5px);
+}
+.eye-child{
+  margin: 0px auto;
+  width: 160px;
+  height: 260px;
+  background-color: #C2C9CF;
+  position: absolute;
+  margin:10px;
+  @include border-radius(5px);
+}
+.eye__sec{
+  margin: 0px auto;
+  width: 140px;
+  height: 240px;
+  background-color: #C2B9B0;
+  position: absolute;
+  margin:10px;
+  @include border-radius(5px);
+}
+.eye__third{
+  margin: 0px auto;
+  width: 120px;
+  height: 220px;
+  background-color: #7E685A;
+  position: absolute;
+  margin:10px;
+  @include border-radius(5px);
+}
+.eye__forth{
+  margin: 0px auto;
+  width: 100px;
+  height: 200px;
+  background-color: #58493F;
+  position: absolute;
+  margin:10px;
+  @include border-radius(5px);
+}
+.eye__fifth{
+  margin: 0px auto;
+  width: 80px;
+  height: 180px;
+  background-color: #312822;
+  position: absolute;
+  margin:10px;
+  @include border-radius(5px);
+}
+.eye__sixth{
+  margin: 0px auto;
+  width: 60px;
+  height: 160px;
+  background-color: $black;
+  position: absolute;
+  margin:10px;
+  @include border-radius(5px);
+}
+
+
+#container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+
+
+
+.yoo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Lato, sans-serif;
+    font-size: 1.8rem;
+    background: radial-gradient(ellipse at center, #f5f5f5 0%,#ddd 100%);
+    user-select: none;
+}
+.thumbnail {
+    -webkit-backface-visibility: hidden;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 15px 50px rgba(0,0,0,.5);
+}
+.thumbnail img {
+    max-width: 100%;
+    transition: opacity .2s ease-in-out;
+}
+.thumbnail:hover img {
+    opacity: .5;
+}
+.thumbnail::after,
+.thumbnail::before {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+    transition: transform .4s ease-out;
+    color: #fff;
+}
+.thumbnail::after {
+    content: attr(data-title);
+    top: 0;
+    padding-top: 55px;
+    transform: translateY(-100%) scale(.8);
+    background: rgba(0,0,0,.4);
+    font-size: 3.5rem;
+    font-weight: 300;
+    font-family: Merriweather, serif;
+    text-align: center;
+}
+.thumbnail::before {
+    content: attr(data-description) "…";
+    top: 50%;
+    transform: translateY(100%) scale(.8);
+    background: rgba(107,38,68,.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: #f1f1f1;
+    font-size: 1.5rem;
+}
+.thumbnail:hover::after,
+.thumbnail:hover::before {
+    transform: translateY(0%) scale(1);
+}h1 {
+    font-family: Merriweather, serif;
+    margin: 0 0 50px;
+    cursor: default;
 }
